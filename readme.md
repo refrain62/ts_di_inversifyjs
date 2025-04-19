@@ -23,3 +23,19 @@ package.jsonの調整
 ```
 
 
+## inversifyのインストール
+```
+npm install reflect-metadata
+npm install inversify 
+```
+
+tsconfig.json の調整
+```
+{
+  'compilerOptions': {
+    'target': 'ES5',
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,   
+  }
+}
+```
