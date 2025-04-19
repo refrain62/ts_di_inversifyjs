@@ -1,5 +1,11 @@
-function hello(name: string): void {
-  console.log("Hello " + name + "!");
-}
-let your_name: string = "Yamada";
-hello(your_name);
+import container from './inversify.config';
+
+import { TYPES } from "./types";
+import User from "./user";
+
+const user = container.get<User>(TYPES.User)
+
+user.userId = 100
+user.name = "hanako"
+user.saveUser()
+// => Saved hanako! with inversify
